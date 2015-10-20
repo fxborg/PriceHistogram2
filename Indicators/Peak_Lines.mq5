@@ -56,7 +56,7 @@ int SlowPeriod=24*InpSlowPeriod*2;  //(30min)
 
 int DailyPeriod=InpDailyPeriod*12;  //(60h/5min)
 int D1BinRange=5;
-int BinRange=20;
+int BinRange=15;
 
 double P1Buffer[];
 double P2Buffer[];
