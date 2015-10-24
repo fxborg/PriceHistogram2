@@ -345,7 +345,14 @@ int OnCalculate(const int rates_total,
       for(int k=0;k<AvgVolPeriod;k++) avg+=(long)VolBuf[i-k];
 
       avg=(long)MathRound(avg/AvgVolPeriod);
-      if(tick_volume[i]<avg)
+      double histogram_bars=(PeriodSeconds(InpHistogramTF)/PeriodSeconds(PERIOD_CURRENT)*InpPeriod)+1;
+      double cur_vol=0;
+      for(int k=0;k<histogram_bars;k++)
+         {
+         cur_vol+=tick_volume[i];
+         }
+      cur_vol/=histogram_bars;
+      if(cur_vol<avg)
          max_hist=max_hist*2;
 
       int pos=0;
