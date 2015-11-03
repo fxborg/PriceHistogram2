@@ -5,7 +5,7 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright 2015, fxborg"
 #property link      "http://blog.livedoor.jp/fxborg/"
-#property version   "1.05"
+#property version   "1.06"
 #property indicator_chart_window
 #define PIP      ((_Digits <= 3) ? 0.01 : 0.0001)
 #property indicator_buffers 47
